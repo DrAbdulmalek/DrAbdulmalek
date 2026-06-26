@@ -16,79 +16,80 @@
 
 An end-to-end, self-healing platform for Arabic and multilingual medical document intelligence. From scanned prescriptions to structured data — with automated quality gates and continuous learning.
 
-### Start Here
+> **🚀 New here?** Start with [**omni-medical-suite**](https://github.com/DrAbdulmalek/omni-medical-suite) — it's the main platform that ties everything together.
+
+### Ecosystem Map
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                    OMNIMEDICAL SUITE ECOSYSTEM                   │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│  ┌──────────────┐    ┌──────────────────┐    ┌───────────────┐ │
-│  │  🔧 scanner-  │───▶│  ⭐ omni-medical  │───▶│  📊 medical-  │ │
-│  │   fixer      │    │   -suite         │    │   ocr-bench-  │ │
-│  │  Pre-OCR     │    │  Main Platform   │    │   marks       │ │
-│  │  Normalizer  │    │  OCR+NLP+Web+API │    │  Quality Gates│ │
-│  └──────────────┘    └────────┬─────────┘    └───────────────┘ │
-│                               │                                 │
-│  ┌──────────────┐    ┌───────▼──────────┐    ┌───────────────┐ │
-│  │  📊 medical-  │    │  🔄 medical-ocr- │    │  ✏️ medical-  │ │
-│  │   ocr-       │◀──│   training-hub   │◀──│   ocr-trainer │ │
-│  │   ground-    │    │  Ingest+Validate │    │  Corrections  │ │
-│  │   truth      │    │  +PII Scrub      │    │  +Ensemble    │ │
-│  └──────────────┘    └──────────────────┘    └───────────────┘ │
-│                                                                 │
-│  ┌────────────────────────────────────────────────────────────┐ │
-│  │  🤗 Hugging Face Spaces                                    │ │
-│  │  [Medical Handwriting OCR] — Flagship Live Demo            │ │
-│  │  [Medical OCR Trainer]      — Correction Interface         │ │
-│  │  [Mission Control]          — MLOps Dashboard              │ │
-│  └────────────────────────────────────────────────────────────┘ │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
+                         OMNIMEDICAL SUITE ECOSYSTEM
+    ══════════════════════════════════════════════════════════════
+
+  ┌──────────────┐     ┌───────────────────┐     ┌──────────────┐
+  │  scanner-    │────▶│  omni-medical-    │────▶│  medical-ocr-│
+  │  fixer       │     │  suite            │     │  benchmarks  │
+  │  Pre-OCR     │     │  Main Platform    │     │  Quality     │
+  │  Normalizer  │     │  OCR+NLP+Web+API  │     │  Gates       │
+  └──────────────┘     └────────┬──────────┘     └──────┬───────┘
+                                │                       │
+                       ┌────────▼──────────┐    ┌──────▼───────┐
+                       │  medical-ocr-     │    │  medical-ocr-│
+                       │  training-hub     │    │  trainer     │
+                       │  Ingest + PII     │    │  Corrections │
+                       │  Scrub + Validate │    │  + Ensemble  │
+                       └────────┬──────────┘    └──────────────┘
+                                │
+                       ┌────────▼──────────┐
+                       │  medical-ocr-     │
+                       │  ground-truth     │
+                       │  Verified Datasets│
+                       └───────────────────┘
+
+  ┌─────────────────────────────────────────────────────────────┐
+  │  Hugging Face Spaces                                        │
+  │                                                             │
+  │  🏆 medical-handwriting-ocr  ─  Flagship Live Demo          │
+  │  🔧 medical-ocr-trainer      ─  Correction Interface        │
+  │  📊 mission-control          ─  MLOps Dashboard             │
+  └─────────────────────────────────────────────────────────────┘
 ```
 
-| # | Repository | Role |
-|:-:|------------|------|
-| ⭐ | [**omni-medical-suite**](https://github.com/DrAbdulmalek/omni-medical-suite) | Main platform — OCR, NLP, Web UI, API (Next.js + FastAPI + Qdrant) |
-| 🔧 | [**scanner-fixer**](https://github.com/DrAbdulmalek/scanner-fixer) | Pre-OCR normalization — dual-algorithm skew detection + auto-crop |
-| 📊 | [**medical-ocr-ground-truth**](https://github.com/DrAbdulmalek/medical-ocr-ground-truth) | Single Source of Truth for verified medical datasets |
-| 🔄 | [**medical-ocr-training-hub**](https://github.com/DrAbdulmalek/medical-ocr-training-hub) | Data ingestion, validation, hybrid PII scrubbing (Regex + CamelBERT NER) |
-| ✏️ | [**medical-ocr-trainer**](https://github.com/DrAbdulmalek/medical-ocr-trainer) | Human-in-the-loop correction + 5-engine ensemble collection |
-| 📏 | [**medical-ocr-benchmarks**](https://github.com/DrAbdulmalek/medical-ocr-benchmarks) | Quality gates — CER/WER thresholds, A/B testing, nightly regressions |
+### Repositories (Recommended Reading Order)
+
+| Step | Repository | Role |
+|:----:|------------|------|
+| 1 | [**omni-medical-suite**](https://github.com/DrAbdulmalek/omni-medical-suite) | Main platform — OCR, NLP, Web UI, API |
+| 2 | [**scanner-fixer**](https://github.com/DrAbdulmalek/scanner-fixer) | Pre-OCR normalization — skew detection + auto-crop |
+| 3 | [**medical-ocr-training-hub**](https://github.com/DrAbdulmalek/medical-ocr-training-hub) | Data ingestion, validation, hybrid PII scrubbing |
+| 4 | [**medical-ocr-ground-truth**](https://github.com/DrAbdulmalek/medical-ocr-ground-truth) | Verified medical datasets (Single Source of Truth) |
+| 5 | [**medical-ocr-trainer**](https://github.com/DrAbdulmalek/medical-ocr-trainer) | Human-in-the-loop correction + 5-engine ensemble |
+| 6 | [**medical-ocr-benchmarks**](https://github.com/DrAbdulmalek/medical-ocr-benchmarks) | Quality gates — CER/WER thresholds, nightly regressions |
 
 **Live Demos (Hugging Face):**
 
 | Space | Role |
 |-------|------|
-| [🤗 Medical Handwriting OCR](https://huggingface.co/spaces/DrAbdulmalek/medical-handwriting-ocr) | **Flagship Demo** — try it now |
-| [🤗 Medical OCR Trainer](https://huggingface.co/spaces/DrAbdulmalek/medical-ocr-trainer) | Specialized correction tool |
-| [🤗 Mission Control](https://huggingface.co/spaces/DrAbdulmalek/mission-control) | MLOps monitoring dashboard |
+| [🏆 Medical Handwriting OCR](https://huggingface.co/spaces/DrAbdulmalek/medical-handwriting-ocr) | **Flagship Demo** — try it now |
+| [🔧 Medical OCR Trainer](https://huggingface.co/spaces/DrAbdulmalek/medical-ocr-trainer) | Specialized correction tool |
+| [📊 Mission Control](https://huggingface.co/spaces/DrAbdulmalek/mission-control) | MLOps monitoring dashboard |
 
 ---
 
-## 💡 Independent Side Projects
+<details>
+<summary><h3>🏗️ Architecture Highlights</h3></summary>
 
-Not related to medical OCR — standalone utilities:
+- **Self-Healing MLOps Loop**: Nightly benchmarks evaluate CER against thresholds (printed &lt; 5% / handwritten &lt; 12%). On failure, the pipeline auto-triggers retraining; on success, it auto-deploys to production — no human intervention needed.
+- **Pre-OCR Normalization**: Scanner Fixer reduces CER by **40–50%** through dual-algorithm skew detection and intelligent auto-crop, acting as the critical first layer before any OCR engine runs.
+- **Hybrid PII Scrubber**: A fast Regex layer catches structured patterns (phone, ID numbers), while a CamelBERT NER layer detects Arabic names — achieving zero false positives on medical dosages.
+- **OCR Fusion V2**: 5-engine cascade with confidence-based routing and automatic fallback, ensuring no single point of failure in the recognition pipeline.
+- **Vector Search**: Qdrant-powered semantic search over processed medical documents for rapid retrieval and cross-referencing.
+- **Arabic NLP**: Context protector, grammatical error correction, and semantic deduplication tailored for Arabic medical terminology.
 
-| Repository | Description |
-|------------|-------------|
-| [IntelliFile-app](https://github.com/DrAbdulmalek/IntelliFile-app) | AI-powered file classification for Manjaro Linux (Ollama + Next.js) |
-| [telegram-forwarder](https://github.com/DrAbdulmalek/telegram-forwarder) | Telegram content forwarder using Download-Upload technique (Telethon + Gradio) |
-
----
-
-## 🏗️ Architecture Highlights
-
-- **Self-Healing MLOps**: Nightly benchmarks → threshold check (CER < 5% printed / < 12% handwritten) → auto-deploy or auto-retrain
-- **Hybrid PII Scrubber**: Fast Regex layer + CamelBERT NER for Arabic name detection — zero false positives on medical dosages
-- **OCR Fusion V2**: 5-engine cascade with confidence-based routing and automatic fallback
-- **Pre-OCR Normalization**: Scanner Fixer reduces CER by 40-50% through skew detection and intelligent auto-crop
-- **Vector Search**: Qdrant-powered semantic search over processed medical documents
-- **Arabic NLP**: Context protector, grammatical error correction, and semantic deduplication
+</details>
 
 ---
 
-## 📦 Tech Stack
+<details>
+<summary><h3>📦 Tech Stack</h3></summary>
 
 <p>
   <img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python" />
@@ -100,6 +101,17 @@ Not related to medical OCR — standalone utilities:
   <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv" />
   <img src="https://img.shields.io/badge/Turborepo-F97316?style=flat-square" />
 </p>
+
+</details>
+
+---
+
+> **⚡ Note:** The projects below are **independent utilities** — not part of OmniMedical Suite.
+>
+> | Repository | Description |
+> |------------|-------------|
+> | [IntelliFile-app](https://github.com/DrAbdulmalek/IntelliFile-app) | AI-powered file classification for Manjaro Linux (Ollama + Next.js) |
+> | [telegram-forwarder](https://github.com/DrAbdulmalek/telegram-forwarder) | Telegram content forwarder using Download-Upload technique (Telethon + Gradio) |
 
 ---
 
