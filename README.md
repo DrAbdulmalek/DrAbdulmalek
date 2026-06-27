@@ -57,7 +57,7 @@ An end-to-end, self-healing platform for Arabic and multilingual medical documen
 
 | Step | Repository | Role |
 |:----:|------------|------|
-| 1 | [**omni-medical-suite**](https://github.com/DrAbdulmalek/omni-medical-suite) | Main platform — OCR, NLP, Web UI, API |
+| 1 | [**omni-medical-suite**](https://github.com/DrAbdulmalek/omni-medical-suite) | Main platform — OCR, NLP, Web UI, API [![CI](https://github.com/DrAbdulmalek/omni-medical-suite/actions/workflows/ci.yml/badge.svg)](https://github.com/DrAbdulmalek/omni-medical-suite/actions) |
 | 2 | [**scanner-fixer**](https://github.com/DrAbdulmalek/scanner-fixer) | Pre-OCR normalization — skew detection + auto-crop |
 | 3 | [**medical-ocr-training-hub**](https://github.com/DrAbdulmalek/medical-ocr-training-hub) | Data ingestion, validation, hybrid PII scrubbing |
 | 4 | [**medical-ocr-ground-truth**](https://github.com/DrAbdulmalek/medical-ocr-ground-truth) | Verified medical datasets (Single Source of Truth) |
@@ -111,7 +111,7 @@ An end-to-end, self-healing platform for Arabic and multilingual medical documen
 > | Repository | Description |
 > |------------|-------------|
 > | [IntelliFile-app](https://github.com/DrAbdulmalek/IntelliFile-app) | AI-powered file classification for Manjaro Linux (Ollama + Next.js) |
-> | [telegram-forwarder](https://github.com/DrAbdulmalek/telegram-forwarder) | Telegram content forwarder using Download-Upload technique (Telethon + Gradio) |
+> | [telegram-forwarder](https://github.com/DrAbdulmalek/telegram-forwarder) | Telegram content forwarder (Telethon + Gradio) [![CI](https://github.com/DrAbdulmalek/telegram-forwarder/actions/workflows/ci.yml/badge.svg)](https://github.com/DrAbdulmalek/telegram-forwarder/actions) |
 
 ---
 
