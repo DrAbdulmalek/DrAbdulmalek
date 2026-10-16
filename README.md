@@ -31,9 +31,9 @@ I build practical, testable tools for Arabic and medical document processing, wi
 | medical-translation-bot *(private)* | Medical translation workflow and evaluation |
 | [translation-core](https://github.com/DrAbdulmalek/translation-core) | Reusable translation foundation |
 | [manjaro-care](https://github.com/DrAbdulmalek/manjaro-care) | Safe Manjaro maintenance tooling |
+| channel-ops-dashboard *(private)* | Channel operations and OCR review tooling |
 
 > Repositories marked *(private)* are not publicly accessible; they are listed for portfolio accuracy only.
-| channel-ops-dashboard *(private)* | Channel operations and OCR review tooling |
 
 ## Engineering principles
 
