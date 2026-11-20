@@ -25,13 +25,15 @@ I build practical, testable tools for Arabic and medical document processing, wi
 |---|---|
 | [omni-medical-suite](https://github.com/DrAbdulmalek/omni-medical-suite) | Main medical document intelligence platform |
 | [ocr-core](https://github.com/DrAbdulmalek/ocr-core) | Reusable OCR core and engine integrations |
-| [omni-ocr-training-db](https://github.com/DrAbdulmalek/omni-ocr-training-db) | Private OCR training-data store and sync target |
+| omni-ocr-training-db *(private)* | OCR training-data store and sync target |
 | [arabic-medical-glossary](https://github.com/DrAbdulmalek/arabic-medical-glossary) | Arabic medical terminology |
 | [dictionaries-csv](https://github.com/DrAbdulmalek/dictionaries-csv) | Reproducible bilingual dictionary conversions |
-| [medical-translation-bot](https://github.com/DrAbdulmalek/medical-translation-bot) | Medical translation workflow and evaluation |
+| medical-translation-bot *(private)* | Medical translation workflow and evaluation |
 | [translation-core](https://github.com/DrAbdulmalek/translation-core) | Reusable translation foundation |
 | [manjaro-care](https://github.com/DrAbdulmalek/manjaro-care) | Safe Manjaro maintenance tooling |
-| [channel-ops-dashboard](https://github.com/DrAbdulmalek/channel-ops-dashboard) | Channel operations and OCR review tooling |
+| channel-ops-dashboard *(private)* | Channel operations and OCR review tooling |
+
+> Repositories marked *(private)* are not publicly accessible; they are listed for portfolio accuracy only.
 
 ## Engineering principles
 
